@@ -6,14 +6,16 @@ import Music from "../musics/Music"
 import Popular from "../popular/Popular"
 import Ppost from "../Ppost/Ppost"
 import "./style.css"
-
+//import News from "./components/news/News"
+//import News from "./components/news/News"
 const Home = () => {
   return (
     <>
       <main>
         <div className='container'>
           <section className='mainContent'>
-            <Popular />
+            
+          <Popular/>
             <Ppost />
             <Life />
             <Music />

@@ -1,25 +1,34 @@
-import React, { useState } from "react"
+/*import React, { useState } from "react"
 import Head from "./Head"
 import "./header.css"
 import SearchIcon from '@material-ui/icons/Search';
-import DehazeIcon from '@material-ui/icons/Dehaze';
-import { Link } from "react-router-dom"
+//import DehazeIcon from '@material-ui/icons/Dehaze';
+import { NavLink,Link } from "react-router-dom"
 
-const Header = () => {
+//import { useNavigate } from 'react-router-dom'
+//import { NavLink } from 'react-router-dom'
+
+import{ Button } from '@mui/material'
+
+const Header = (props) => {
   const [navbar, setNavbar] = useState(false)
+  //const navigate=useNavigate();
 
   return (
     <>
       <Head />
       <header>
+       
         <div className='container paddingSmall'>
-          <nav>
-            <ul className={navbar ? "navbar" : "flex"} onClick={() => setNavbar(false)}>
+          <div>
+            <div className={navbar ? "navbar" : "flex"} onClick={() => setNavbar(false)}>
               <li>
+              
                 <Link to='/'>Home</Link>
               </li>
               <li>
-                <Link to='/culture'>Culture</Link>
+                <ul>
+                <NavLink to='/culture'>HeadLines</NavLink>
               </li>
               <li>
                 <Link to='/politics'>Politics</Link>
@@ -42,23 +51,32 @@ const Header = () => {
               <li>
                 <Link to='/blogs'>Blogs</Link>
               </li>
+                   
+                    
+                    
+                   
+                    <button className={Button} onClick={props.onLogout}>
+          Logout
+        </button>
+       </ul>
 
-            </ul>
-            <div className="header__right">
-                        <div className="toi-plus">
-                            <a className="toi-plus-link" href="https://timesofindia.indiatimes.com/toi-plus">
-                                TOI+
-                            </a>
-                        </div>
-                        <SearchIcon className="header__icon" />
-                        <DehazeIcon className="header__icon"/>
-                    </div>
-                    </nav>
-                </div>
+                   
+                   
+       
+        
+     
+                    
             <button className='barIcon' onClick={() => setNavbar(!navbar)}>
               {navbar ? <i className='fa fa-times'></i> : <i className='fa fa-bars'></i>}
          </button>
+         </div>
+         </div>
+         
+        
+         
+        
          </header>
+       
          </>
     
     
@@ -66,5 +84,75 @@ const Header = () => {
   )
 }
 
+export default Header*/
+import React, { useState } from "react"
+import Head from "./Head"
+import "./header.css"
+import { Link } from "react-router-dom"
+import{ Button } from '@mui/material'
+
+const Header = (props) => {
+  const [navbar, setNavbar] = useState(false)
+
+  return (
+    <>
+      <Head />
+      <header>
+        <div className='container paddingSmall'>
+          <nav>
+            <ul className={navbar ? "navbar" : "flex"} onClick={() => setNavbar(false)}>
+              <li>
+                <Link to='/'>Home</Link>
+              </li>
+              <li>
+                <Link to='/culture'>Culture</Link>
+              </li>
+              <li>
+                <Link to='/politics'>Politics</Link>
+              </li>
+              <li>
+                <Link to='/memes'>Entertainment</Link>
+              </li>
+              <li>
+                <Link to='/sports'>Sports</Link>
+              </li>
+              <li>
+                <Link to='/boxed'>Boxed</Link>
+              </li>
+              <li>
+                <Link to='/reviews'>technology</Link>
+              </li>
+              <li>
+                <Link to='/reviews'>Blogs</Link>
+              </li>
+              <li>
+                <Link to='/reviews'>Reviews</Link>
+              </li>
+             
+     
+  
+    <div className="container">
+      <div className="Right-section">
+        <button className="logoutButton" onClick={props.onLogout}>
+          Logout
+        </button>
+      </div>
+      {/* Other content of your component */}
+    </div>
+ 
+</ul>
+           
+            <button className='barIcon' onClick={() => setNavbar(!navbar)}>
+              {navbar ? <i className='fa fa-times'></i> : <i className='fa fa-bars'></i>}
+            </button>
+          </nav>
+        </div>
+      </header>
+    </>
+  )
+}
+
 export default Header
+
+
 

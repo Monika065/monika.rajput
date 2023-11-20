@@ -1,11 +1,11 @@
+
 import React from "react"
 import "./Popular.css"
 
 import Slider from "react-slick"
-//import "slick-carousel/slick/slick.css"
- //import "slick-carousel/slick/slick-theme.css"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 import { popular } from "../../../../dummyData"
-//import Heading from "../../../common/heading/Heading"
 import Heading from "../../../common/heading/Heading"
 
 const Popular = () => {

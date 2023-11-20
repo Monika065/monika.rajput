@@ -1,14 +1,17 @@
-.head {
-  cursor: pointer;
+.Head {
+  padding: 30px;
+ text-align: center;
+ font-size: 50px;
+ font-family: 'Nunito', sans-serif;
 }
 .head .logo img {
   width: 500px;
-  text-align: left;
+  text-align: center;
 
 }
 header {
-  background-color: #000;
-  color: #fff;
+  background-color:grey;
+  color:black;
 }
 header li {
   margin-right: 30px;
@@ -28,6 +31,8 @@ header a {
   display: none;
   border: none;
 }
+  
+
 @media screen and (max-width: 768px) {
   .head .ad {
     display: none;
@@ -61,4 +66,34 @@ header a {
   header ul li {
     margin-bottom: 30px;
   }
+  .leftSection {
+    display: flex;
+    align-items: center;
+
+
+  
+  }
+  .rightSection {
+    display: flex;
+    align-items: center;
+  }
+  
+  .button {
+    background-color: #0a050e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    color: #af8eee;
+  }
+ 
+
+
 }
+

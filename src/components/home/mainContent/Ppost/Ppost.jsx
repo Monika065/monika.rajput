@@ -4,7 +4,7 @@ import { ppost } from "../../../../dummyData"
 import Heading from "../../../common/heading/Heading"
 import "./ppost.css"
 
-// copy same code of popular
+
 const Ppost = () => {
   const settings = {
     dots: false,

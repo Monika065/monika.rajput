@@ -10,13 +10,13 @@ const SinglePageSlider = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 7,
+    slidesToShow: 2,
     slidesToScroll: 2,
     responsive: [
       {
         breakpoint: 800,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
